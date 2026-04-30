@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jonatas — Portfolio</title>
+  <title>Jonatas Severino</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +14,21 @@
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo">&lt;Jonatas /&gt;</a>
+      <a href="#" class="nav-logo">&#35; Jonatas Severino</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">Sobre</a></li>
-        <li><a href="#projects" class="nav-link">Projetos</a></li>
-        <li><a href="#contact" class="nav-link">Contato</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav.about">Sobre</a></li>
+        <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contato</a></li>
+        <li>
+          <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+            <span class="lang-flag">🇺🇸</span>
+            <span class="lang-label">EN</span>
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -30,16 +36,16 @@
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="hero-content">
-      <p class="hero-greeting">Olá, eu sou</p>
+      <p class="hero-greeting" data-i18n="hero.greeting">Olá, eu sou</p>
       <h1 class="hero-name">Jonatas</h1>
-      <p class="hero-title">Administrador de Sistemas &amp; Entusiasta Linux</p>
-      <p class="hero-description">
+      <p class="hero-title" data-i18n="hero.title">Administrador de Sistemas &amp; Entusiasta Linux</p>
+      <p class="hero-description" data-i18n="hero.description">
         Apaixonado por infraestrutura, automação e tecnologias open-source.
         Focado em soluções robustas com Red Hat, containers e cloud.
       </p>
       <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">Ver Projetos</a>
-        <a href="#contact" class="btn btn-outline">Fale Comigo</a>
+        <a href="#projects" class="btn btn-primary" data-i18n="hero.btnProjects">Ver Projetos</a>
+        <a href="#contact" class="btn btn-outline" data-i18n="hero.btnContact">Fale Comigo</a>
       </div>
     </div>
     <div class="hero-visual">
@@ -56,7 +62,7 @@
           <p><span class="prompt">$</span> cat skills.txt</p>
           <p class="output">Linux, RHEL, Docker, Podman, Ansible, Shell Script</p>
           <p><span class="prompt">$</span> cat certifications.txt</p>
-          <p class="output">RHCSA (em preparação)</p>
+          <p class="output" data-i18n="hero.certOutput">RHCSA (em preparação)</p>
           <p><span class="prompt">$</span> <span class="cursor">_</span></p>
         </div>
       </div>
@@ -66,16 +72,16 @@
   <!-- About Section -->
   <section class="section" id="about">
     <div class="container">
-      <h2 class="section-title">Sobre Mim</h2>
+      <h2 class="section-title" data-i18n="about.title">Sobre Mim</h2>
       <div class="about-grid">
         <div class="about-text">
-          <p>
+          <p data-i18n="about.text1">
             Sou um profissional de TI focado em administração de sistemas Linux
             e infraestrutura. Atualmente me preparando para a certificação
             <strong>RHCSA (EX200)</strong>, aprofundando meus conhecimentos em
             RHEL 9, automação e boas práticas de administração.
           </p>
-          <p>
+          <p data-i18n="about.text2">
             Acredito que a melhor forma de aprender é praticando e compartilhando
             conhecimento. Por isso, documento meus estudos e projetos aqui.
           </p>
@@ -93,7 +99,7 @@
           </div>
           <div class="skill-card">
             <div class="skill-icon">⚙️</div>
-            <h3>Automação</h3>
+            <h3 data-i18n="skills.automation">Automação</h3>
             <p>Ansible, Shell Script</p>
           </div>
           <div class="skill-card">
@@ -103,7 +109,7 @@
           </div>
           <div class="skill-card">
             <div class="skill-icon">🔒</div>
-            <h3>Segurança</h3>
+            <h3 data-i18n="skills.security">Segurança</h3>
             <p>SELinux, Firewalld</p>
           </div>
           <div class="skill-card">
@@ -119,15 +125,15 @@
   <!-- Projects Section -->
   <section class="section section-alt" id="projects">
     <div class="container">
-      <h2 class="section-title">Projetos</h2>
-      <p class="section-subtitle">Alguns dos meus trabalhos e estudos</p>
+      <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
+      <p class="section-subtitle" data-i18n="projects.subtitle">Alguns dos meus trabalhos e estudos</p>
 
       <!-- Project Filter Tabs -->
       <div class="project-filters">
-        <button class="filter-btn active" data-filter="all">Todos</button>
-        <button class="filter-btn" data-filter="study">Estudos</button>
-        <button class="filter-btn" data-filter="infra">Infraestrutura</button>
-        <button class="filter-btn" data-filter="automation">Automação</button>
+        <button class="filter-btn active" data-filter="all" data-i18n="filter.all">Todos</button>
+        <button class="filter-btn" data-filter="study" data-i18n="filter.study">Estudos</button>
+        <button class="filter-btn" data-filter="infra" data-i18n="filter.infra">Infraestrutura</button>
+        <button class="filter-btn" data-filter="automation" data-i18n="filter.automation">Automação</button>
       </div>
 
       <!-- Project Cards -->
@@ -137,13 +143,13 @@
           <div class="project-card-header">
             <span class="project-icon">📖</span>
             <div class="project-links">
-              <a href="https://github.com/jonatassev/jonatassev.github.io" target="_blank" rel="noopener noreferrer" aria-label="Ver no GitHub" class="project-link">
+              <a href="https://github.com/jonatassev/jonatassev.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="project-link">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
               </a>
             </div>
           </div>
-          <h3 class="project-title">Guia de Preparação RHCSA</h3>
-          <p class="project-description">
+          <h3 class="project-title" data-i18n="project1.title">Guia de Preparação RHCSA</h3>
+          <p class="project-description" data-i18n="project1.desc">
             Livro digital completo de estudo e preparação para a certificação
             Red Hat Certified System Administrator (RHCSA) — EX200, baseado no RHEL 9.
           </p>
@@ -151,7 +157,7 @@
             <span class="tag">RHCSA</span>
             <span class="tag">RHEL 9</span>
             <span class="tag">Linux</span>
-            <span class="tag">Certificação</span>
+            <span class="tag" data-i18n="tag.certification">Certificação</span>
           </div>
         </article>
 
@@ -159,19 +165,19 @@
           <div class="project-card-header">
             <span class="project-icon">🖥️</span>
             <div class="project-links">
-              <a href="#" class="project-link" aria-label="Ver no GitHub">
+              <a href="#" class="project-link" aria-label="GitHub">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
               </a>
             </div>
           </div>
           <h3 class="project-title">Homelab Setup</h3>
-          <p class="project-description">
+          <p class="project-description" data-i18n="project2.desc">
             Configuração de laboratório doméstico para prática de administração
             de sistemas, virtualização e networking.
           </p>
           <div class="project-tags">
             <span class="tag">Homelab</span>
-            <span class="tag">Virtualização</span>
+            <span class="tag" data-i18n="tag.virtualization">Virtualização</span>
             <span class="tag">Networking</span>
           </div>
         </article>
@@ -180,19 +186,19 @@
           <div class="project-card-header">
             <span class="project-icon">🤖</span>
             <div class="project-links">
-              <a href="#" class="project-link" aria-label="Ver no GitHub">
+              <a href="#" class="project-link" aria-label="GitHub">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
               </a>
             </div>
           </div>
           <h3 class="project-title">Ansible Playbooks</h3>
-          <p class="project-description">
+          <p class="project-description" data-i18n="project3.desc">
             Coleção de playbooks Ansible para automação de tarefas comuns de
             administração de servidores Linux.
           </p>
           <div class="project-tags">
             <span class="tag">Ansible</span>
-            <span class="tag">Automação</span>
+            <span class="tag" data-i18n="tag.automation">Automação</span>
             <span class="tag">DevOps</span>
           </div>
         </article>
@@ -201,13 +207,13 @@
           <div class="project-card-header">
             <span class="project-icon">🐳</span>
             <div class="project-links">
-              <a href="#" class="project-link" aria-label="Ver no GitHub">
+              <a href="#" class="project-link" aria-label="GitHub">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
               </a>
             </div>
           </div>
           <h3 class="project-title">Container Lab</h3>
-          <p class="project-description">
+          <p class="project-description" data-i18n="project4.desc">
             Exemplos práticos de containerização com Docker e Podman,
             incluindo Dockerfiles otimizados e compose files.
           </p>
@@ -225,8 +231,8 @@
   <!-- Contact Section -->
   <section class="section" id="contact">
     <div class="container">
-      <h2 class="section-title">Contato</h2>
-      <p class="section-subtitle">Vamos conversar? Entre em contato comigo</p>
+      <h2 class="section-title" data-i18n="contact.title">Contato</h2>
+      <p class="section-subtitle" data-i18n="contact.subtitle">Vamos conversar? Entre em contato comigo</p>
       <div class="contact-grid">
         <a href="https://github.com/jonatassev" target="_blank" rel="noopener noreferrer" class="contact-card">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
@@ -236,12 +242,12 @@
         <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="contact-card">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           <h3>LinkedIn</h3>
-          <p>Conecte-se comigo</p>
+          <p data-i18n="contact.linkedin">Conecte-se comigo</p>
         </a>
         <a href="mailto:seuemail@email.com" class="contact-card">
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           <h3>Email</h3>
-          <p>Envie uma mensagem</p>
+          <p data-i18n="contact.email">Envie uma mensagem</p>
         </a>
       </div>
     </div>
@@ -250,7 +256,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 Jonatas. Feito com ☕ e Linux.</p>
+      <p data-i18n="footer.text">&copy; 2026 Jonatas. Feito com ☕ e Linux.</p>
     </div>
   </footer>
 

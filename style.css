@@ -121,6 +121,37 @@ img {
   background: var(--accent-glow);
 }
 
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.lang-toggle:hover {
+  border-color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.lang-flag {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.lang-label {
+  letter-spacing: 0.5px;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -572,6 +603,11 @@ img {
 
   .nav-links.open {
     transform: translateY(0);
+  }
+
+  .lang-toggle {
+    margin-top: 12px;
+    align-self: flex-start;
   }
 
   .hero {
